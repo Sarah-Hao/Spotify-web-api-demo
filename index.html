@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Spotify-web-api-demo</title>
+    <meta char="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./SpotifyApiCtrl.js" type="text/javascript"></script>
+    <script src="./UICtrl.js" type="text/javascript"></script>
+    <script src="./AppCtrl.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="section">
+                <h1>Spotify Web API Demo</h1> 
+                <div id="themeIcon"><span class="iconify" data-icon="fluent:dark-theme-24-regular"></span></div>
+            </div>
+            
+            <div class="section">
+                <label for="Genre">Genre</label>
+                <select name="Genres" id="genre"></select>
+            </div>
+            <div class="section">
+                <label for="Playlist">Playlist</label>
+                <select name="Playlist" id="playlist"></select>
+            </div>
+            <div class="section">
+                <button type='submit' id="search">Search</button>
+            </div>
+            <div class="section">
+                <div class="tracks" id="tracks"></div>
+            </div>
+        </div>
+        <div class="trackDetail" id="trackDetail"></div>
+</body>
+<script defer=true>
+    AppCtrl(SpotifyApiCtrl(), UICtrl());
+</script>
+
+</html>
